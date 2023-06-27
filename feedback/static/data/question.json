@@ -1,0 +1,124 @@
+[
+    {
+        "question": "How satisfied are you with the product's performance ?",
+        "name": "question1",
+        "choices": [
+            {
+                "value": "Very Satisfied",
+                "id": "checkbox1"
+            },
+            {
+                "value": "Satisfied",
+                "id": "checkbox2"
+            },
+            {
+                "value": "Neutral",
+                "id": "checkbox3"
+            },
+            {
+                "value": "Dissatisfied",
+                "id": "checkbox4"
+            },
+            {
+                "value": "Very Dissatisfied",
+                "id": "checkbox5"
+            }
+        ]
+    },
+    {
+        "question": "Would you recommend this product to others ?",
+        "name": "question2",
+        "choices": [
+            {
+                "value": "Yes, definitely",
+                "id": "checkbox6"
+            },
+            {
+                "value": "Yes, with some reservations",
+                "id": "checkbox7"
+            },
+            {
+                "value": "Maybe",
+                "id": "checkbox8"
+            },
+            {
+                "value": "No, I wouldn't",
+                "id": "checkbox9"
+            }
+        ]
+    },
+    {
+        "question": "How would you rate the product's ease of use ?",
+        "name": "question3",
+        "choices": [
+            {
+                "value": "Very easy to use",
+                "id": "checkbox10"
+            },
+            {
+                "value": "Somewhat easy to use",
+                "id": "checkbox11"
+            },
+            {
+                "value": "Neither easy nor difficult",
+                "id": "checkbox12"
+            },
+            {
+                "value": "Somewhat difficult to use",
+                "id": "checkbox13"
+            },
+            {
+                "value": "Very difficult to use",
+                "id": "checkbox14"
+            }
+        ]
+    },
+    {
+        "question": "Did the product meet your expectations ?",
+        "name": "question4",
+        "choices": [
+            {
+                "value": "Exceeded my expectations",
+                "id": "checkbox15"
+            },
+            {
+                "value": "Met my expectations",
+                "id": "checkbox16"
+            },
+            {
+                "value": "Partially met my expectations",
+                "id": "checkbox17"
+            },
+            {
+                "value": "Did not meet my expectations",
+                "id": "checkbox18"
+            }
+        ]
+    },
+    {
+        "question": "How responsive was the customer support for the product ?",
+        "name": "question5",
+        "choices": [
+            {
+                "value": "Highly responsive",
+                "id": "checkbox19"
+            },
+            {
+                "value": "Moderately responsive",
+                "id": "checkbox20"
+            },
+            {
+                "value": "Average responsiveness",
+                "id": "checkbox21"
+            },
+            {
+                "value": "Slow to respond",
+                "id": "checkbox22"
+            },
+            {
+                "value": "Did not contact customer support",
+                "id": "checkbox23"
+            }
+        ]
+    }
+]

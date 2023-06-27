@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock title %}
+{% block body %}
+{% with message=get_flashed_messages() %}
+{% if message %}
+<div class="alert alert-danger" role="alert">
+    {{message[0]}}
+</div>
+{% endif %}
+{% endwith %}
+{% include 'imageshow.html' %}
+<div class="container-fluid" id="homepageing">
+    <div class="container">
+        <div class="d-flex flex-row justify-content-center align-items-center m-5 gap-5 flex-wrap">
+            <div class="d-flex flex-column justify-content-center align-items-center gap-3">
+                <h4>Click Here to Give Feedback</h4>
+                <button type="button"
+                    class="btn btn-success btn-lg border border-black border-2 rounded-pill w-75 animate__animated animate__flipInY animate__slow"
+                    id="gfeed">Give
+                    Feedback</button>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center gap-3">
+                <h4>Click Here to Generate CSV File</h4>
+                <button type="button"
+                    class="btn btn-success btn-lg border border-black border-2 rounded-pill w-75 animate__animated animate__flipInY animate__slow"
+                    id="generate">Generate</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container d-flex flex-column flex-wrap justify-content-center align-items-center mt-4 gap-3 mb-5 visually-hidden"
+    id="generating">
+    <p>Please Wait For Some Time While We Collecting The Data.</p>
+    <p class="fw-bold">We Request You to Do Not Close This Tab</p>
+    <span class="loader"></span>
+    <span class="fs-5 fw-bolder">Wait For Some Time If File is Recieved Then Refresh.</span>
+</div>
+{% endblock body %}

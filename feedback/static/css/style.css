@@ -1,0 +1,77 @@
+@media screen and (max-width:600px) {
+    .formfeed {
+        width: 100%;
+        margin: 10px 15px;
+    }
+
+    .formimg {
+        width: 80%;
+    }
+
+    .aboutpg {
+        margin: 0px 15px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:800px) {
+    .formfeed {
+        width: 80%;
+    }
+
+    .formimg {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .formfeed {
+        width: 40%;
+    }
+
+    .formimg {
+        width: 40%;
+    }
+}
+
+.paragraph {
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+.paragraph::first-letter {
+    font-size: 1.8em;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: #de3500 #0000 #003cff #0000;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: 1s rotate linear infinite;
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: 10px solid transparent;
+    border-bottom-color: #0008ff;
+    transform: translate(-10px, 19px) rotate(-35deg);
+}
+
+.loader:after {
+    border-color: #de3500 #0000 #0000 #0000;
+    transform: translate(32px, 3px) rotate(-35deg);
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg)
+    }
+}

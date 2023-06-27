@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+Feedback Form
+{% endblock title %}
+{% block body %}
+
+<div class="container mt-3 mb-5">
+    <h3 class="text-center text-uppercase text-decoration-underline">Fill the Feedback Form</h3>
+    <div class="d-flex flex-row flex-wrap-reverse gap-3 mt-3 align-items-center justify-content-evenly">
+        {% block updatedata %}
+        
+        {% endblock updatedata %}
+        <div class="d-flex flex-column align-items-center gap-3 formimg">
+            <span class="fs-4 fw-bolder">Consider This as A Product</span>
+            <img src="{{ url_for('static', filename='laptop.jpg') }}"
+                class="w-75 border-2 border-black border rounded-5 p-2" alt="Laptop Image">
+        </div>
+    </div>
+</div>
+{% endblock body %}

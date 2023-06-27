@@ -1,0 +1,61 @@
+{% extends 'feedback.html' %}
+{% block csscripts %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+{% endblock csscripts %}
+{% block updatedata %}
+<div class="card formfeed border-primary border-1 border bg-body-secondary">
+    <div class="card-header pt-3 text-center text-bg-primary">
+        <h5>Feedback Form</h5>
+    </div>
+
+    <div class="card-body">
+        <h5 class="card-title">Basic Details : </h5>
+        <form class="p-1" method="post">
+            <div class="mb-3 mt-3">
+                <label for="nametext" class="form-label">Name : </label>
+                <input type="text" class="form-control" id="nametext" placeholder="John Kelvin" name="nametxt" required>
+            </div>
+            <div class="mb-3">
+                <label for="emailtext" class="form-label">Email : </label>
+                <input type="email" class="form-control" id="emailtext" placeholder="test@gmail.com" name="emtxt"
+                    required>
+            </div>
+            <div class="mb-3">
+                <label for="ageselector" class="form-label">Age : </label>
+                <input type="number" min="10" max="90" class="form-control" id="ageselector" name="ageinput"
+                    placeholder="10" required>
+            </div>
+            <div class="mb-3">
+                {% with message = get_flashed_messages() %}
+                {% if message %}
+                <div class="alert alert-danger mt-2 mb-2" role="alert">
+                    {{message[0]}}
+                </div>
+                {% endif %}
+                <label for="rater" class="form-label">Rating : </label>
+                <select name="rating" id="rater" class="form-select col" required>
+                    <option value="default" selected>Select</option>
+                    <option value="1">&starf;</option>
+                    <option value="2">&starf; &starf;</option>
+                    <option value="3">&starf; &starf; &starf;</option>
+                    <option value="4">&starf; &starf; &starf; &starf;</option>
+                    <option value="5">&starf; &starf; &starf; &starf; &starf;</option>
+                </select>
+                {% endwith %}
+            </div>
+            <div class="mb-3">
+                <label for="suggestions" class="form-label">Your Suggestion : </label>
+                <textarea name="suggestbox" id="suggestions" cols="10" rows="3"
+                    placeholder="Enter Your Suggestion so that we can improve our product" class="form-control"
+                    required></textarea>
+            </div>
+            <div class="mb-3">
+                <span class="fs-6 fw-bold clearfix pb-2">Proceed Next for giving Feedback</span>
+                <button type="submit" id="nextbtn" class="btn btn-primary float-end">Next <i
+                        class="bi bi-arrow-right"></i></button>
+            </div>
+
+        </form>
+    </div>
+</div>
+{% endblock updatedata %}

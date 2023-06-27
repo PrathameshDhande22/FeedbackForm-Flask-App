@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+ThankYou
+{% endblock title %}
+{% block body %}
+<div class="container d-flex flex-column flex-wrap justify-content-center align-items-center" id="thankpage">
+    <img src="{{ url_for('static', filename='click.png') }}" class="mt-5" width="120" alt="Success Image">
+    <p class="paragraph mb-3">
+        <span class="fs-3 fw-bold">Thank you</span> for taking the time to fill out our feedback form. Your input is
+        greatly appreciated, and it will
+        help us improve our products and services. We value your opinion and are committed to providing the best
+        possible experience for our customers. Your feedback plays a vital role in shaping our future endeavors, and
+        we are grateful for your valuable insights. Once again, thank you for sharing your thoughts and for being a
+        valued member of our community.
+    </p>
+    <div class="fs-6 fst-italic mb-3">You will be redirected to the homepage shortly. Please wait for <span
+            id="timer">10</span> seconds</div>
+</div>
+<script>
+    setTimeout(() => {
+        window.location.href = "/"
+    }, 10000)
+
+    const timer = document.getElementById("timer")
+    setInterval(() => {
+        if (timer.innerHTML == "0") {
+            clearInterval(2)
+        }
+        else {
+            timer.innerHTML = timer.innerHTML - 1
+        }
+    }, 1000)
+
+</script>
+{% endblock body %}
